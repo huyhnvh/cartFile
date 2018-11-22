@@ -87,6 +87,8 @@ img {
 .nav-bar {
   grid-area: nav-bar;
 }
+
+
 .main-content {
   grid-area: main-content;
 }
@@ -147,6 +149,7 @@ img {
   right: 1.5rem;
 }
 .main-content {
+  width: 100%;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: 75% 25%;
@@ -154,30 +157,43 @@ img {
   grid-template-areas:
       'between-information result'
 }
+
+.between-information{
+  grid-area: between-information;
+  width: 100%;
+}
+
+
+
 .book-cart {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-row-gap: 20px;
   padding: 1rem 0;
   line-height: 100%;
 }
-.book-1 {
+.book-cart .book {
   display: grid;
-  grid-template-columns: 20% 50% 10% 20%;
-  grid-column-gap: 25px;
+  grid-template-columns: repeat(8, 1fr);
+  grid-column-gap: 20px;
   grid-template-areas:
-    'image-book-1 quickview-book-1 price-1 change-quantity-1'
+  'image-book image-book quickview-book quickview-book quickview-book price change-quantity change-quantity '
 }
-.book-2 {
-  display: grid;
-  grid-template-columns: 20% 50% 10% 20%;
-  grid-column-gap: 25px;
-  grid-template-areas:
-    'image-book-2 quickview-book-2 price-2 change-quantity-2'
+.image-book {
+  grid-area: image-book;
 }
-.book-3 {
-  display: grid;
-  grid-template-columns: 20% 50% 10% 20%;
-  grid-column-gap: 25px;
-  grid-template-areas:
-    'image-book-3 quickview-book-3 pricec-3 change-quantity-3'
+.image-book img{
+  width: 100%;
+}
+.quickview-book {
+  grid-area: quickview-book;
+}
+.price {
+  grid-area: price;
+}
+.change-quantity{
+  grid-area: change-quantity;
+  text-align: center;
 }
 
 .suggest {
@@ -234,7 +250,22 @@ img {
 .img-b4 img{
   height: 11rem;
 }
-
+.result {
+  text-align: center;
+  width: 100%;
+}
+.result input {
+  border-radius: 1em;
+  width: 10em;
+  height: 2.2em;
+  margin-top: 0.5em;
+  font-weight: 700;
+  font-size: 1.3em;
+}
+.result input:hover {
+  color: white;
+  background-color: gray;
+}
 .main-footer {
   background-color: var(--gray);
   font-size: 0.6rem;
