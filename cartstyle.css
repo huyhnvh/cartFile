@@ -1,0 +1,278 @@
+:root{
+  --primary: #201e1f;
+  --gray: #3e3e3e;
+  --light: #fefffe;
+  --shadow: 0px 5px 5px rgba(104, 104, 104, 0.8);
+}
+html {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--light);
+}
+
+body {
+  background: var(--primary);
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  color: var(--light);
+}
+.header {
+  margin: 0;
+  height: 100px;
+  background: var(--gray);
+}
+.menu {
+  background: var(--light);
+  align-items: center;
+  text-align: center;
+  display: grid;
+  grid-gap: 20px;
+  padding: 1rem;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-areas:
+    'logo logo search search search search search option'
+}
+.logo{
+  margin: 10px 100px 10px 100px;
+  grid-area: logo;
+  background-color: var(--black)
+}
+.logo .logo-image {
+  width: 3rem;
+}
+.search {
+  grid-area: search;
+  position: relative;
+}
+.search input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+}
+.search img {
+  position: absolute;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+}
+.option {
+  grid-area: option;
+}
+.option img {
+  float: left;
+  width: 2rem;
+  padding: 5px;
+}
+.user-img {
+  padding-left: 15px;
+}
+.user-img:hover {
+  cursor: pointer;
+}
+.cart:hover {
+  cursor: pointer;
+}
+.main-body {
+  display: grid;
+  grid-gap: 20px;
+  padding: 0 6rem;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-areas:
+    'nav-bar nav-bar main-content main-content main-content main-content main-content main-content'
+}
+.nav-bar {
+  grid-area: nav-bar;
+}
+.main-content {
+  grid-area: main-content;
+}
+.category ul {
+  padding-left: 0;
+
+}
+.category ul li {
+  list-style-type: none;
+  margin-left: 0;
+  line-height: 1.5rem;
+}
+.category ul li:hover {
+  cursor: pointer;
+  color: var(--gray);
+  font-weight: bold;
+}
+.bar {
+  width: 200px;
+  height: 0.75rem;
+  border-radius: 10px;
+  box-shadow: 0px 2px 2px rgba(104, 104, 104, 0.8);
+  background: #2e302e;
+  position: relative;
+  margin: 2rem 0;
+}
+.category ul li {
+  list-style-type: none;
+  margin-left: 0;
+  line-height: 1.5rem;
+}
+.category ul li:hover {
+  cursor: pointer;
+  color: var(--gray);
+  font-weight: bold;
+}
+.bar {
+  width: 200px;
+  height: 0.75rem;
+  border-radius: 10px;
+  box-shadow: 0px 2px 2px rgba(104, 104, 104, 0.8);
+  background: #2e302e;
+  position: relative;
+  margin: 2rem 0;
+}
+.circle-price {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: var(--grey);
+  border: 5px solid var(--light);
+}
+.circle-price-1 {
+  left: 1.5rem;
+}
+.circle-price-2 {
+  right: 1.5rem;
+}
+.main-content {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 75% 25%;
+  grid-column-gap: 100px;
+  grid-template-areas:
+      'between-information result'
+}
+.book-cart {
+  padding: 1rem 0;
+  line-height: 100%;
+}
+.book-1 {
+  display: grid;
+  grid-template-columns: 20% 50% 10% 20%;
+  grid-column-gap: 25px;
+  grid-template-areas:
+    'image-book-1 quickview-book-1 price-1 change-quantity-1'
+}
+.book-2 {
+  display: grid;
+  grid-template-columns: 20% 50% 10% 20%;
+  grid-column-gap: 25px;
+  grid-template-areas:
+    'image-book-2 quickview-book-2 price-2 change-quantity-2'
+}
+.book-3 {
+  display: grid;
+  grid-template-columns: 20% 50% 10% 20%;
+  grid-column-gap: 25px;
+  grid-template-areas:
+    'image-book-3 quickview-book-3 pricec-3 change-quantity-3'
+}
+
+.suggest {
+  width: 100%;
+  margin-top: 3rem;
+}
+.suggest-book {
+  width: 100%;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    'b-1 b-2 b-3 b-4'
+}
+.book {
+  padding: 2rem;
+  font-size: 0.8rem;
+  text-align: justify;
+}
+.book > h4 {
+  margin: 5px;
+}
+.book > span {
+  margin: 0;
+}
+.star {
+  background: var(--primary);
+}
+.star img{
+  height: 1rem;
+}
+.book-1 {
+  grid-area: book-1;
+}
+.book-2 {
+  grid-area: book-2;
+}
+.book-3 {
+  grid-area: book-3;
+}
+.book-4 {
+  grid-area: book-4;
+}
+.img-b1 img{
+
+  height: 11rem;
+}
+.img-b2 img{
+  height: 11rem;
+}
+.img-b3 img{
+  height: 11rem;
+}
+.img-b4 img{
+  height: 11rem;
+}
+
+.main-footer {
+  background-color: var(--gray);
+  font-size: 0.6rem;
+  padding: 0 2rem 1rem 2rem;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-areas:
+    'team open-time payment socials download contact feedback'
+}
+
+.team {
+  grid-area: team;
+}
+.open-time {
+  grid-area: open-time;
+}
+.payment {
+  grid-area: payment;
+  width: 60%;
+}
+.socials {
+  grid-area: socials;
+  width: 60%;
+}
+.download {
+  grid-area: download;
+}
+.contact {
+  grid-area: contact;
+  display: inline-grid;
+}
+.feedback {
+  grid-area: feedback;
+}
+.main-footer img {
+  height: 1.5rem;
+}
+.main-footer h3 {
+  padding-bottom: 0.7rem;
+}
