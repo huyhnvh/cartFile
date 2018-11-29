@@ -200,6 +200,20 @@ img {
   width: 100%;
   margin-top: 3rem;
 }
+.slider {
+  display: flex;
+  overflow-x: auto;
+  -webkit-scroll-snap-points-x: repeat(300px);
+     -ms-scroll-snap-points-x: repeat(300px);
+         scroll-snap-points-x: repeat(300px);
+ -webkit-scroll-snap-type: mandatory;
+     -ms-scroll-snap-type: mandatory;
+         scroll-snap-type: mandatory;
+}
+.suggest-book {
+  flex-shrink: 0;
+  height: 100%;
+}
 .suggest-book {
   width: 100%;
   display: grid;
